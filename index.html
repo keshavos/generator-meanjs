@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Generator-meanjs by keshavos</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Generator-meanjs</h1>
+        <p>MEAN.JS Official Yeoman Generator</p>
+
+        <p class="view"><a href="https://github.com/keshavos/generator-meanjs">View the Project on GitHub <small>keshavos/generator-meanjs</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/keshavos/generator-meanjs/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/keshavos/generator-meanjs/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/keshavos/generator-meanjs">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><a href="http://meanjs.org/"><img src="http://meanjs.org/img/logo-small.png" alt="MEAN.JS Logo"></a></p>
+
+<p><a href="https://travis-ci.org/keshavos/generator-meanjs"><img src="https://travis-ci.org/keshavos/generator-meanjs.svg?branch=master" alt="Build Status"></a></p>
+
+<p>MEAN.JS is a full-stack JavaScript open-source solution, which provides a solid starting point for <a href="http://www.mongodb.org/">MongoDB</a>, <a href="http://www.nodejs.org/">Node.js</a>, <a href="http://expressjs.com/">Express</a>, and <a href="http://angularjs.org/">AngularJS</a> based applications. The idea is to solve the common issues with connecting those frameworks, build a robust framework to support daily development needs, and help developers use better practices while working with popular JavaScript components. </p>
+
+<h2>
+<a name="overview" class="anchor" href="#overview"><span class="octicon octicon-link"></span></a>Overview</h2>
+
+<p>One of the most frequently asked features from MEAN users is a way to scaffold their applications. As we looked for a way to help the community build and deploy production level MEAN applications, we decided to go with a <a href="http://yeoman.io/index.html">Yeoman</a> generator. Yeoman generators provides a powerful, easy to maintain, and open solution for scaffolding applications.</p>
+
+<p>So, we set out to work on the features we thought every developer needs, and we are proud to present the official MEAN.JS Yeoman generator. It includes a set of simple tools you can use to make your MEAN application development easier and way more fun.</p>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>Before you begin make sure you have the <a href="http://yeoman.io/generators.html">yo scaffolding tool</a> installed(As it is part of the Yeoman tool set you might have installed it before). To globally install <em>yo</em> you will need to use npm:</p>
+
+<pre><code>$ npm install -g yo
+</code></pre>
+
+<p><strong>Note:</strong> Your user might not have the permissions to install package globally, so use a super user or <strong>sudo</strong>.</p>
+
+<p>Once you have <em>yo</em> installed, you will need to install the MEAN.JS generator as well:</p>
+
+<pre><code>$ npm install -g generator-meanjs
+</code></pre>
+
+<p>You are now ready to get started with the MEAN.JS generator. The generator will help you create a MEAN.JS application, a CRUD module, Angular Module, and other AngularJS/Express entities.</p>
+
+<h2>
+<a name="generators" class="anchor" href="#generators"><span class="octicon octicon-link"></span></a>Generators</h2>
+
+<p>Available generators:</p>
+
+<ul>
+<li><a href="#application-generator">meanjs</a></li>
+<li><a href="#crud-module-sub-generator">meanjs:crud-module</a></li>
+<li><a href="#angularjs-module-sub-generator">meanjs:angular-module</a></li>
+<li><a href="#angularjs-route-sub-generator">meanjs:angular-route</a></li>
+<li><a href="#angularjs-controller-sub-generator">meanjs:angular-controller</a></li>
+<li><a href="#angularjs-view-sub-generator">meanjs:angular-view</a></li>
+<li><a href="#angularjs-service-sub-generator">meanjs:angular-service</a></li>
+<li><a href="#angularjs-directive-sub-generator">meanjs:angular-directive</a></li>
+<li><a href="#angularjs-filter-sub-generator">meanjs:angular-filter</a></li>
+<li><a href="#angularjs-config-sub-generator">meanjs:angular-config</a></li>
+<li><a href="#angularjs-test-sub-generator">meanjs:angular-test</a></li>
+<li><a href="#express-model-sub-generator">meanjs:express-model</a></li>
+<li><a href="#express-controller-sub-generator">meanjs:express-controller</a></li>
+<li><a href="#express-routes-sub-generator">meanjs:express-route</a></li>
+<li><a href="#express-test-sub-generator">meanjs:express-test</a></li>
+</ul><p><strong>Note: Generators are to be run from the root directory of your app.</strong></p>
+
+<h2>
+<a name="application-generator" class="anchor" href="#application-generator"><span class="octicon octicon-link"></span></a>Application Generator</h2>
+
+<p>The application generator will help you create a fresh copy of a MEAN.JS application in your working folder. To create your MEAN application, navigate to a new project folder, and then use <em>yo</em> to generate your application:</p>
+
+<pre><code>$ yo meanjs
+</code></pre>
+
+<p>The generator will ask you a few questions about your new application and will generate it for you. When the installation process is over, you will be able to use grunt to run your new MEAN application:</p>
+
+<pre><code>$ grunt
+</code></pre>
+
+<p>Now, the application generator does a great job scaffolding a whole application, but daily work requires us to repeat a lot of structured code. For this purpose we provided you with some sub-generators to help you speed up your development.</p>
+
+<h2>
+<a name="crud-module-sub-generator" class="anchor" href="#crud-module-sub-generator"><span class="octicon octicon-link"></span></a>CRUD Module Sub-Generator</h2>
+
+<p>The CRUD module sub-generator will help you create a new CRUD module, similar to the article sample provided with the project. To create a new CRUD module you will need to use <em>yo</em> again:</p>
+
+<pre><code>$ yo meanjs:crud-module &lt;module-name&gt;
+</code></pre>
+
+<p>This will create both AngularJS and Express files supporting full CRUD functionality, and add the Karma and Mocha tests.</p>
+
+<p><strong>Note:</strong> Don’t forget to use your module name as an argument when calling the CRUD module sub-generator.</p>
+
+<h2>
+<a name="angularjs-module-sub-generator" class="anchor" href="#angularjs-module-sub-generator"><span class="octicon octicon-link"></span></a>AngularJS Module Sub-Generator</h2>
+
+<p>Another redundant task is creating a new AngularJS module structure. For this purpose you can use the Angular module sub-generator. It will create the proper folder structure for you and the module initialization file. Creating a new AngularJS module is simple:</p>
+
+<pre><code>$ yo meanjs:angular-module &lt;module-name&gt;
+</code></pre>
+
+<p>The sub-generator will ask for more information about your folder structure, and will create the empty new AngularJS module. Now, to fill that new module with your business logic, we provided you with several AngularJS entities sub-generators.</p>
+
+<h2>
+<a name="angularjs-route-sub-generator" class="anchor" href="#angularjs-route-sub-generator"><span class="octicon octicon-link"></span></a>AngularJS Route Sub-Generator</h2>
+
+<p>To construct your module you will often need to create a new route. The AngularJS route sub-generator will help you create a view, controller and a proper route in your module <strong>routes.js</strong> file. If it can’t find the module routes file the sub-generator will create one for you. Creating a new AngularJS route will involve executing this command:</p>
+
+<pre><code>$ yo meanjs:angular-route &lt;route-name&gt;
+</code></pre>
+
+<p>The sub-generator will ask for more information about your controller, view and routing URL, and will generate the appropriate files for you.</p>
+
+<h2>
+<a name="angularjs-controller-sub-generator" class="anchor" href="#angularjs-controller-sub-generator"><span class="octicon octicon-link"></span></a>AngularJS Controller Sub-Generator</h2>
+
+<p>The AngularJS Controller sub-generator will create a new AngularJS controller in the specified module's <strong>controllers</strong> folder. To create a new AngularJS controller run <em>yo</em> again by using this command:</p>
+
+<pre><code>$ yo meanjs:angular-controller &lt;controller-name&gt;
+</code></pre>
+
+<p>The sub-generator will ask you for the module name under which you would like to create your new controller, and will create a new AngularJS controller file in that module <strong>controllers</strong> folder and a test file in the <strong>tests</strong> folder.</p>
+
+<p><strong>Don’t forget!</strong> This time you pass the controller name as an argument. </p>
+
+<h2>
+<a name="angularjs-view-sub-generator" class="anchor" href="#angularjs-view-sub-generator"><span class="octicon octicon-link"></span></a>AngularJS View Sub-Generator</h2>
+
+<p>Once you have your controller file ready, you may want to add a view that makes use of this controller. The AngularJS view sub-generator will create a new AngularJS view in thr specified module's <strong>views</strong> folder, and will allow you to add a route definition for it. To create a new AngularJS view you will need to execute this command:</p>
+
+<pre><code>$ yo meanjs:angular-view &lt;view-name&gt;
+</code></pre>
+
+<p>The sub-generator will ask you for the module name under which you would like to create your new view, and some additional routing information. It will then create a new view file in that module's <strong>views</strong> folder and add a routing state to the module <strong>routes.js</strong> file. If it can’t find the module routes file it will create one for you.</p>
+
+<h2>
+<a name="angularjs-service-sub-generator" class="anchor" href="#angularjs-service-sub-generator"><span class="octicon octicon-link"></span></a>AngularJS Service Sub-Generator</h2>
+
+<p>The AngularJS service sub-generator will create a new AngularJS service in the specified module's <strong>services</strong> folder. To create a new AngularJS service you will need to execute this command:</p>
+
+<pre><code>$ yo meanjs:angular-service &lt;service-name&gt;
+</code></pre>
+
+<p>The sub-generator will ask you for the module name under which you would like to create your new service, and will create a new AngularJS service file in that module's <strong>services</strong> folder.</p>
+
+<h2>
+<a name="angularjs-directive-sub-generator" class="anchor" href="#angularjs-directive-sub-generator"><span class="octicon octicon-link"></span></a>AngularJS Directive Sub-Generator</h2>
+
+<p>The AngularJS directive sub-generator will create a new AngularJS directive in the specified module's <strong>directives</strong> folder. Creating a new AngularJS directive should already look familiar:</p>
+
+<pre><code>$ yo meanjs:angular-directive &lt;directive-name&gt;
+</code></pre>
+
+<p>The sub-generator will ask you for the module name under which you would like to create your new directive, and will create a new AngularJS directive file in that module's <strong>directives</strong> folder.</p>
+
+<h2>
+<a name="angularjs-filter-sub-generator" class="anchor" href="#angularjs-filter-sub-generator"><span class="octicon octicon-link"></span></a>AngularJS Filter Sub-Generator</h2>
+
+<p>The AngularJS filter sub-generator will create a new AngularJS filter in a specified module's <strong>filters</strong> folder. To create a new AngularJS filter you need to call yo again:</p>
+
+<pre><code>$ yo meanjs:angular-filter &lt;filter-name&gt;
+</code></pre>
+
+<p>The sub-generator will ask you for the module name under which you would like to create your new filter, and will create a new AngularJS filter file in that module <strong>filters</strong> folder.</p>
+
+<h2>
+<a name="angularjs-config-sub-generator" class="anchor" href="#angularjs-config-sub-generator"><span class="octicon octicon-link"></span></a>AngularJS Config Sub-Generator</h2>
+
+<p>The AngularJS config sub-generator will create a new AngularJS config section in a specified module's <strong>config</strong> folder. To create a new AngularJS config file just call yo:</p>
+
+<pre><code>$ yo meanjs:angular-config &lt;config-name&gt;
+</code></pre>
+
+<p>The sub-generator will ask you for the module name under which you would like to create your new config, and will create a new AngularJS config file in that module's <strong>config</strong> folder.</p>
+
+<h2>
+<a name="angularjs-test-sub-generator" class="anchor" href="#angularjs-test-sub-generator"><span class="octicon octicon-link"></span></a>AngularJS Test Sub-Generator</h2>
+
+<p>Your MEAN application comes pre-bundled with the Karma test runner and Jasmine testing framework. To test your AngularJS controllers you’ll need to create a test file, which Karma will later use to run the tests. For this purpose we provided you with the AngularJS test sub-generator. Creating a new AngularJS test is effortless, just execute this command:</p>
+
+<pre><code>$ yo meanjs:angular-test &lt;controller-name&gt;
+</code></pre>
+
+<p>This will create a test file for your controller, and if the sub-generator doesn’t find the specified controller file, it will create one for you.</p>
+
+<p><strong>Don’t forget!</strong> You're suppose to pass the controller name as an argument. </p>
+
+<h2>
+<a name="express-model-sub-generator" class="anchor" href="#express-model-sub-generator"><span class="octicon octicon-link"></span></a>Express Model Sub-Generator</h2>
+
+<p>Often you will find the need to just create a single Express model. The Express model sub-generator will help you with creating an Express model in the <strong>app/models</strong> folder. To create a new model just use <em>yo</em>:</p>
+
+<pre><code>$ yo meanjs:express-model &lt;model-name&gt;
+</code></pre>
+
+<p>This will create a new empty model in the <strong>app/models</strong> folder and a test file in the <strong>app/tests</strong> folder.</p>
+
+<p><strong>Note:</strong> It is recommended you avoid naming your model in plural form and use a singular form instead. i.e article and not articles</p>
+
+<h2>
+<a name="express-controller-sub-generator" class="anchor" href="#express-controller-sub-generator"><span class="octicon octicon-link"></span></a>Express Controller Sub-Generator</h2>
+
+<p>Another recurring task is creating an empty Express controller. The Express controller sub-generator will help you with creating an Express controller in the <strong>app/controllers</strong> folder. To create a new controller just use <em>yo</em>:</p>
+
+<pre><code>$ yo meanjs:express-controller &lt;controller-name&gt;
+</code></pre>
+
+<p>This will create a new empty controller in the <strong>app/controllers</strong> folder.</p>
+
+<h2>
+<a name="express-routes-sub-generator" class="anchor" href="#express-routes-sub-generator"><span class="octicon octicon-link"></span></a>Express Routes Sub-Generator</h2>
+
+<p>To make HTTP requests to your controller methods you will need to use a routing file in the <strong>app/routes</strong> folder. The Express routes sub-generator will help you to add a new empty routes file. To create a new routes file execute this <em>yo</em> command:</p>
+
+<pre><code>$ yo meanjs:express-route &lt;route-name&gt;
+</code></pre>
+
+<p>This will create a new empty route file in the <strong>app/routes</strong> folder.</p>
+
+<h2>
+<a name="express-test-sub-generator" class="anchor" href="#express-test-sub-generator"><span class="octicon octicon-link"></span></a>Express Test Sub-Generator</h2>
+
+<p>Your MEAN application comes pre-bundled with the Mocha testing framework. To test your Express models you’ll need to create a new test file, which Mocha will use while running tests. For this purpose we provided you with the Express test sub-generator. Creating a new Express test is easy, just execute this command:</p>
+
+<pre><code>$ yo meanjs:express-test &lt;model-name&gt;
+</code></pre>
+
+<p>This will create a test file for your Express model, and if the sub-generator doesn’t find the specified model, it will create one for you.</p>
+
+<p><strong>Don’t forget!</strong> You're suppose to pass the model name as an argument. </p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="http://opensource.org/licenses/bsd-license.php">BSD license</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/keshavos">keshavos</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
